@@ -1,0 +1,6 @@
+framework module BDCommonSDK {
+  umbrella header "BDCommonSDK.h"
+
+  export *
+  module * { export * }
+}

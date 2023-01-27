@@ -1,0 +1,6 @@
+framework module GDTCommonSDK {
+  umbrella header "GDTCommonSDK.h"
+
+  export *
+  module * { export * }
+}

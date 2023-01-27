@@ -1,0 +1,6 @@
+framework module SIGCommonSDK {
+  umbrella header "SIGCommonSDK.h"
+
+  export *
+  module * { export * }
+}
