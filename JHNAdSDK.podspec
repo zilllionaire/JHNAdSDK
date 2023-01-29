@@ -24,10 +24,9 @@ Pod::Spec.new do |spec|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                   DESC
+  spec.description  = "JHNAdSDK by jihuoniao,description of JHNAdSDK."
 
-  spec.homepage     = "http://EXAMPLE/JHNAdSDK"
+  spec.homepage     = "https://github.com/zilllionaire/JHNAdSDK"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,7 +37,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
+  spec.license      = "MIT"
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -67,8 +66,8 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
-  # spec.osx.deployment_target = "10.7"
+   spec.ios.deployment_target = "9.0"
+  # spec.osx.deployment_target = "10.13"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
@@ -90,8 +89,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  #spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -129,14 +128,18 @@ Pod::Spec.new do |spec|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
+  spec.requires_arc = true
+  spec.xcconfig =
+  {
+    'OTHER_LDFLAGS' => '-ObjC'
+  }
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
   spec.subspec 'JiHuoNiaoAdSDK' do |s|
     s.frameworks   = "MessageUI","iAd","ImageIO","SystemConfiguration","WebKit","MobileCoreServices", "SafariServices","CoreTelephony","CoreLocation","AVFoundation","CoreGraphics","MediaPlayer",
-    "AdSupport","CoreMedia","CFNetwork", "CoreMotion","CoreServices", "StoreKit","Security","Photos","DeviceCheck"
+    "AdSupport","CoreMedia","CFNetwork", "CoreMotion","CoreServices", "StoreKit","Security","Photos"
     s.weak_framework = 'WebKit', 'UIKit', 'Foundation'
     s.libraries    = "c++", "sqlite3.0", "z", "xml2", "resolv.9"
     s.vendored_frameworks =  'JiHuoNiaoAdSDK/JiHuoNiaoAdSDK.framework', 'JiHuoNiaoAdSDK/AdSpaceLib.framework'
@@ -146,8 +149,7 @@ Pod::Spec.new do |spec|
  # GDT
   spec.subspec 'GDTCommonSDK' do |s|
          s.ios.deployment_target = '9.0'
-         s.vendored_frameworks = 'JHNAdSDK/GDTCommonSDK/GDTCommonSDK.framework'
-         s.dependency 'JHNAdSDK/JiHuoNiaoAdSDK'
+         s.vendored_frameworks = 'JiHuoNiaoAdSDK/GDTCommonSDK/GDTCommonSDK.framework'
          s.dependency 'GDTMobSDK', '4.14.02'
   end
 
@@ -155,8 +157,7 @@ Pod::Spec.new do |spec|
  # csj
   spec.subspec 'CSJCommonSDK' do |s|
      s.ios.deployment_target = '9.0'
-     s.vendored_frameworks = 'JHNAdSDK/CSJCommonSDK/CSJCommonSDK.framework'
-     s.dependency 'JHNAdSDK/JiHuoNiaoAdSDK'
+     s.vendored_frameworks = 'JiHuoNiaoAdSDK/CSJCommonSDK/CSJCommonSDK.framework'
      s.dependency 'Ads-CN-Beta', '5.1.0.1'
   end
 
@@ -164,8 +165,7 @@ Pod::Spec.new do |spec|
  # KS
   spec.subspec 'KSCommonSDK' do |s|
      s.ios.deployment_target = '9.0'
-     s.vendored_frameworks =  'JHNAdSDK/KSCommonSDK/KSCommonSDK.framework'
-     s.dependency 'JHNAdSDK/JiHuoNiaoAdSDK'
+     s.vendored_frameworks =  'JiHuoNiaoAdSDK/KSCommonSDK/KSCommonSDK.framework'
      s.dependency 'KSAdSDK', '3.3.36'
   end
   
@@ -173,16 +173,14 @@ Pod::Spec.new do |spec|
  # sig
   spec.subspec 'SIGCommonSDK' do |s|
      s.ios.deployment_target = '9.0'
-     s.vendored_frameworks =  'JHNAdSDK/SIGCommonSDK/SIGCommonSDK.framework'
-     s.dependency 'JHNAdSDK/JiHuoNiaoAdSDK'
+     s.vendored_frameworks =  'JiHuoNiaoAdSDK/SIGCommonSDK/SIGCommonSDK.framework'
      s.dependency 'SigmobAd-iOS', '4.6.1'
   end
   
  # BD
   spec.subspec 'BDCommonSDK' do |s|
      s.ios.deployment_target = '9.0'
-     s.vendored_frameworks =  'JHNAdSDK/BDCommonSDK/BDCommonSDK.framework'
-     s.dependency 'JHNAdSDK/JiHuoNiaoAdSDK'
+     s.vendored_frameworks =  'JiHuoNiaoAdSDK/BDCommonSDK/BDCommonSDK.framework'
      s.dependency 'BaiduMobAdSDK', '4.901'
   end
     
