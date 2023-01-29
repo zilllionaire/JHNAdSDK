@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "JHNAdSDK"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "A short description of JHNAdSDK."
 
   # This description is used to generate tags and improve search results.
@@ -146,7 +146,7 @@ Pod::Spec.new do |spec|
     s.libraries    = "c++", "sqlite3.0", "z", "xml2", "resolv.9"
     s.vendored_frameworks =  'JHNAdSDK/JiHuoNiaoAdSDK.framework','JHNAdSDK/AdSpaceLib.framework'
 
-  end 
+  end
 
  # GDT
   spec.subspec 'GDTCommonSDK' do |s|
