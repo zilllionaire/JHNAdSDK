@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "JHNAdSDK"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "A short description of JHNAdSDK."
 
   # This description is used to generate tags and improve search results.
@@ -129,6 +129,7 @@ Pod::Spec.new do |spec|
   #  you can include multiple dependencies to ensure it works.
 
   spec.requires_arc = true
+  spec.default_subspec = 'JiHuoNiaoAdSDK'
   spec.xcconfig =
   {
     'OTHER_LDFLAGS' => '-ObjC'
