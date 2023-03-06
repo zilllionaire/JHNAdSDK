@@ -1,0 +1,6 @@
+framework module BZCommonSDK {
+  umbrella header "BZCommonSDK.h"
+
+  export *
+  module * { export * }
+}

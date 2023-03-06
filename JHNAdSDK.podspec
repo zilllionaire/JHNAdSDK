@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "JHNAdSDK"
-  spec.version      = "1.0.2"
+  spec.version      = "1.1.1.0"
   spec.summary      = "A short description of JHNAdSDK."
 
   # This description is used to generate tags and improve search results.
@@ -153,7 +153,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'GDTCommonSDK' do |s|
      s.ios.deployment_target = '9.0'
      s.vendored_frameworks = 'JHNAdSDK/GDTCommonSDK/GDTCommonSDK.framework'
-     s.dependency 'GDTMobSDK', '4.14.02'
+     s.dependency 'GDTMobSDK', '4.14.12'
   end
 
 
@@ -161,7 +161,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'CSJCommonSDK' do |s|
      s.ios.deployment_target = '9.0'
      s.vendored_frameworks = 'JHNAdSDK/CSJCommonSDK/CSJCommonSDK.framework'
-     s.dependency 'Ads-CN-Beta', '5.1.0.1'
+     s.dependency 'Ads-CN-Beta', '5.2.0.1'
   end
 
 
@@ -169,7 +169,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'KSCommonSDK' do |s|
      s.ios.deployment_target = '9.0'
      s.vendored_frameworks =  'JHNAdSDK/KSCommonSDK/KSCommonSDK.framework'
-     s.dependency 'KSAdSDK', '3.3.36'
+     s.dependency 'KSAdSDK', '3.3.40'
   end
   
   
@@ -177,14 +177,20 @@ Pod::Spec.new do |spec|
   spec.subspec 'SIGCommonSDK' do |s|
      s.ios.deployment_target = '9.0'
      s.vendored_frameworks =  'JHNAdSDK/SIGCommonSDK/SIGCommonSDK.framework'
-     s.dependency 'SigmobAd-iOS', '4.6.1'
+     s.dependency 'SigmobAd-iOS', '4.7.1'
   end
   
  # BD
   spec.subspec 'BDCommonSDK' do |s|
      s.ios.deployment_target = '9.0'
      s.vendored_frameworks =  'JHNAdSDK/BDCommonSDK/BDCommonSDK.framework'
-     s.dependency 'BaiduMobAdSDK', '4.901'
+     s.dependency 'BaiduMobAdSDK', '5.101'
+  end
+  
+   # BZ
+  spec.subspec 'BZCommonSDK' do |s|
+     s.ios.deployment_target = '9.0'
+     s.vendored_frameworks =  'JHNAdSDK/BZCommonSDK/BZCommonSDK.framework','JHNAdSDK/BZCommonSDK/BeiZiFoundation.framework','JHNAdSDK/BZCommonSDK/BeiZiSDK.framework''
   end
     
 end
