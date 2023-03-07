@@ -190,7 +190,7 @@ Pod::Spec.new do |spec|
    # BZ
   spec.subspec 'BZCommonSDK' do |s|
      s.ios.deployment_target = '9.0'
-     s.vendored_frameworks =  'JHNAdSDK/BZCommonSDK/BZCommonSDK.framework','JHNAdSDK/BZCommonSDK/BeiZiFoundation.framework','JHNAdSDK/BZCommonSDK/BeiZiSDK.framework''
+     s.vendored_frameworks =  'JHNAdSDK/BZCommonSDK/BZCommonSDK.framework','JHNAdSDK/BZCommonSDK/BeiZiFoundation.framework','JHNAdSDK/BZCommonSDK/BeiZiSDK.framework'
   end
     
 end
